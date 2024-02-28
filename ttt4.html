@@ -166,7 +166,8 @@
                                 document.getElementById('win').innerHTML = '';
                                 document.getElementById('win').append("X won!");
                                 document.getElementById('turn').innerHTML = '';
-                                document.getElementById('turn').innerHTML = 'Congrats X!';
+                                document.getElementById('turn').style.height="90px";
+                                document.getElementById('turn').innerHTML = 'Click Start Game to play again!';
 
                                 // adding all squares to clicked to prevent any more moves
                                 for (let i = 0; i < NUM_SQUARES; i++) {
@@ -176,7 +177,8 @@
                                 document.getElementById('win').innerHTML = '';
                                 document.getElementById('win').append("O won!");
                                 document.getElementById('turn').innerHTML = '';
-                                document.getElementById('turn').innerHTML = 'Congrats O!';
+                                document.getElementById('turn').style.height="90px";
+                                document.getElementById('turn').innerHTML = 'Click Start Game to play again!';
 
                                 // adding all squares to clicked to prevent any more moves
                                 for (let i = 0; i < NUM_SQUARES; i++) {
