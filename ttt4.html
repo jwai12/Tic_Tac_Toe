@@ -229,6 +229,8 @@
                             if (winConditions.includes("XXX")) {
                                 document.getElementById('win').innerHTML = '';
                                 document.getElementById('win').append("X won!");
+                                document.getElementById('turn').innerHTML = '';
+                                document.getElementById('turn').innerHTML = 'Congrats X!';
 
                                 // adding all squares to clicked to prevent any more moves
                                 for (let i = 0; i < NUM_SQUARES; i++) {
@@ -237,6 +239,8 @@
                             } else if (winConditions.includes("OOO")) {
                                 document.getElementById('win').innerHTML = '';
                                 document.getElementById('win').append("O won!");
+                                document.getElementById('turn').innerHTML = '';
+                                document.getElementById('turn').innerHTML = 'Congrats O!';
 
                                 // adding all squares to clicked to prevent any more moves
                                 for (let i = 0; i < NUM_SQUARES; i++) {
