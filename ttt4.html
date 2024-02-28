@@ -188,6 +188,10 @@
                             } else if (!moves.includes("-")) {
                                 document.getElementById('win').innerHTML = '';
                                 document.getElementById('win').append("Stalemate!");
+
+                                document.getElementById('turn').innerHTML = '';
+                                document.getElementById('turn').style.height="90px";
+                                document.getElementById('turn').innerHTML = 'Click Start Game to play again!';
                             }
                         }
                     })
@@ -206,11 +210,13 @@
 
                     if (player % 2 == 0) {
                         document.getElementById('turn').innerHTML = '';
+                        document.getElementById('turn').style.height="50px";
                         document.getElementById('turn').append("It's O's turn!");
                         player++;
                     } 
                     else {
                         document.getElementById('turn').innerHTML = '';
+                        document.getElementById('turn').style.height="50px";
                         document.getElementById('turn').append("It's X's turn!");
                         player++;
                     }
