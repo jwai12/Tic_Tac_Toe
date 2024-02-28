@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <style>
+            div.square:hover {
+                background-color: blue;
+            }
+            h1 {
+                margin: 50px;
+                text-align: center;
+            }
+            h2 {
+                text-align: center; 
+                font-size: 20px;
+            }            
+            div.square {
+                border: 1px solid black;
+                box-sizing: border-box;
+                margin: 5;
+                padding: 5;
+                height: 200px;
+            }
+            .grid {
+                display: flex;                   
+                flex-wrap: wrap;                   
+                justify-content: space-around;
+                margin-left: 500px;
+                margin-right: 500px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+
+            }
+            .square {
+                flex: 0 0 32%;                  
+                margin-bottom: 10px;
+                margin-left: 100;
+                padding-left: 100;
+            }
+            div.player,
+            div.win {
+                border: 1px solid black;
+                width: 300px;
+                margin: auto;
+                margin-top: 10px;
+            }
+
+        </style>
+        <script language="javascript">
+            document.write("<h1>Super Cool Title</h1>");
+
+            // who's turn
+            document.write("<div class='player'>");
+            document.write("<h2>It's X's turn!</h2>");
+            document.write("</div>");
+
+            // win condition
+            document.write("<div class='win'>");
+            document.write("<h2>No one has won yet</h2>");
+            document.write("</div>");
+
+            document.write("<div class='grid'>");
+            const NUM_SQUARES = 9;
+            for (i = 0; i < NUM_SQUARES; i++) {
+                id = "sq" + i;
+                document.write("<div class='square' id='" + id + "'></div>");
+            }            
+            document.write("</div>");
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
