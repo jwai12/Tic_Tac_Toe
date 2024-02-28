@@ -86,7 +86,6 @@
 
             window.onload = function()
             {
-                var clicked = [];
                 var player = Math.floor(Math.random() * 2);
 
                 if (player % 2 == 0) {
@@ -98,11 +97,12 @@
 
                 document.getElementById('win').append("No one has won yet");
 
+                // used to keep track of clicked squares
+                var clicked = [];
                 var winConditions = [];
-
+                
                 // creating squares array 
                 var squares = [];
-
                 var squares_coll = document.getElementsByClassName("square");
                 var squares = Array.prototype.slice.call(squares_coll, 0 );
                 
@@ -124,10 +124,10 @@
                                 document.getElementById('turn').append("It's X's turn!");
                                 player++;
                             }
-
-                            var moves = [];
-
+                            
                             // keeping track of moves
+                            var moves = [];
+                            
                             squares.forEach((element) => {
                                 var value = element.innerHTML;
                                 
@@ -218,6 +218,7 @@
 
                             winConditions[8] = str;
 
+                            // checking for a win
                             if (winConditions.includes("XXX")) {
                                 document.getElementById('win').innerHTML = '';
                                 document.getElementById('win').append("X won!");
@@ -253,13 +254,12 @@
                 }
 
                 button.addEventListener("click", function() {
-                    // clear clicked
+                    // clearing arrays
                     clicked = [];
-                    // clear moves
                     moves = [];
-                    // clear winConditions
                     winConditions = [];
 
+                    // resetting text
                     document.getElementById('win').innerHTML = '';
                     document.getElementById('win').append("No one has won yet");
 
